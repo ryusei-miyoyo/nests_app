@@ -1,0 +1,47 @@
+/* ---------------------------------
+l-main
+--------------------------------- */
+.l-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &__container {
+    width: 100%;
+    margin-top: $space_5l;
+  }
+  &__inner {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    background: url(../../../dist/img/bgimage.jpg) no-repeat;
+    background-size: contain;
+    background-position: top center;
+    @include mq(){
+      width: 100vw;
+      height: calc(5*100vw/8);
+    }
+  }
+}
+
+/* ---------------------------------
+share
+--------------------------------- */
+
+.l-share {
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: $space_4l;
+    text-align: center;
+  }
+  &__text {
+    font-size: $font-size_l;
+    @include mq() {
+      @include fontsizeVw(18);
+    }
+  }
+  &__icon {
+    margin-right: $space_m;
+  }
+}
